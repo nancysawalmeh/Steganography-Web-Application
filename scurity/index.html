@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Steganography Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Steganography Tool</h1>
+        <div class="image-container">
+            <div class="image-frame">
+                <h2>Input Image</h2>
+                <canvas id="sourceCanvas" width="350" height="250"></canvas>
+                <input type="file" id="loadImage" accept="image/*" />
+            </div>
+            <div class="image-frame">
+                <h2>Output Image</h2>
+                <canvas id="resultCanvas" width="350" height="250"></canvas>
+            </div>
+        </div>
+        <div class="control-panel">
+            <label for="lsbCount">Choose LSB Count:</label>
+            <input type="radio" name="lsb" value="1" checked> 1 LSB
+            <input type="radio" name="lsb" value="2"> 2 LSBs
+            <input type="radio" name="lsb" value="3"> 3 LSBs
+        </div>
+        <div class="text-area">
+            <h2>Hidden Message</h2>
+            <textarea id="hiddenMessage" rows="10"></textarea>
+        </div>
+        <div class="button-panel">
+            <button id="hideMessage">Hide Message</button>
+            <button id="revealMessage">Reveal Message</button>
+            <button id="exportImage">Export Image</button>
+            <button id="clear">Clear</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
